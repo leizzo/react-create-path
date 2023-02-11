@@ -1,0 +1,63 @@
+:root {
+  --ad-Color-prim: #111;
+  --ad-Color-sec: #00e676;
+  --ad-Color-del: #e53935;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: block;
+}
+
+svg {
+  border: solid 0.5px #333;
+  display: block;
+  background: #fff;
+}
+
+.ad-Grid {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 1px;
+}
+.ad-Grid.is-hidden {
+  opacity: 0;
+}
+.ad-Path {
+  fill: none;
+  stroke: #555;
+  stroke-width: 2px;
+  stroke-linecap: round;
+}
+.ad-Point {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #555;
+  stroke-width: 3px;
+  transition: fill 0.2s;
+}
+.ad-Point:hover,
+.ad-PointGroup.is-active .ad-Point {
+  fill: var(--ad-Color-sec);
+}
+.ad-PointGroup--first .ad-Point {
+  stroke: var(--ad-Color-sec);
+}
+.ad-Anchor {
+  opacity: 0.5;
+}
+.ad-PointGroup.is-active .ad-Anchor {
+  opacity: 1;
+}
+.ad-Anchor-point {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #888;
+  stroke-width: 3px;
+}
+.ad-Anchor-line {
+  stroke: #888;
+  stroke-width: 1px;
+  stroke-dasharray: 5 5;
+}
